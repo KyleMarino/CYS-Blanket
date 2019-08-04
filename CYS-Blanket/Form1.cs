@@ -21,6 +21,8 @@ namespace CYS_Blanket
         {
             InitializeComponent();
             customers = new List<Customer>();
+
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -49,7 +51,17 @@ namespace CYS_Blanket
 
             foreach(Customer c in customers)
             {
-                customerPanel.Controls.Add(new CustomerItem(c));
+                CustomerItem newC = new CustomerItem(c);
+                newC.Resize(newC.Height, customerPanel.Width -10);
+                customerPanel.Controls.Add(newC);
+            }
+        }
+
+        private void btnCollapseAll_Click(object sender, EventArgs e)
+        {
+            foreach(CustomerItem c in customerPanel.Controls)
+            {
+                c.Contract();
             }
         }
     }
