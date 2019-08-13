@@ -48,8 +48,6 @@
   <ItemGroup>
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\Location.cs" />
-    <Compile Include="Classes\Salesorder.cs" />
-    <Compile Include="Classes\SalesorderLineItem.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
