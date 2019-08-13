@@ -118,15 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DBConnectionString" xml:space="preserve">
-    <value>Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_ENVIRONMENT.accdb";Persist Security Info=True</value>
-  </data>
-  <data name="DevDBConnectionString" xml:space="preserve">
-    <value>Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_DEV.accdb";Persist Security Info=True</value>
-  </data>
-  <data name="ProdDBConnectionString" xml:space="preserve">
-    <value>Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_PROD.accdb";Persist Security Info=True</value>
-  </data>
-  <data name="QADBConnectionString" xml:space="preserve">
-    <value>Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_QA.accdb";Persist Security Info=True</value>
+    <value>Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS-Blanket-DB.accdb";Persist Security Info=True</value>
   </data>
 </root>

@@ -7,9 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CYS-Blanket", "CYS-Blanket\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B694841C-771B-4D9A-ABAD-B9385ED3873D}"
 	ProjectSection(SolutionItems) = preProject
-		CYS-Blanket\CYS_Blanket_DEV.accdb = CYS-Blanket\CYS_Blanket_DEV.accdb
-		CYS-Blanket\CYS_Blanket_PROD.accdb = CYS-Blanket\CYS_Blanket_PROD.accdb
-		CYS-Blanket\CYS_Blanket_QA.accdb = CYS-Blanket\CYS_Blanket_QA.accdb
+		..\..\..\Desktop\CYS-Blanket-DB.accdb = ..\..\..\Desktop\CYS-Blanket-DB.accdb
 	EndProjectSection
 EndProject
 Global

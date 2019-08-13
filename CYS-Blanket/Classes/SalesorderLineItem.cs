@@ -20,35 +20,13 @@ namespace CYS_Blanket.Classes
         private OleDbConnection conn;
         public SalesorderLineItem()
         {
-            if (Properties.Settings.Default.Environment == "DEV")
-            {
-                conn = new OleDbConnection(Properties.Resources.DevDBConnectionString);
-            }
-            else if (Properties.Settings.Default.Environment == "QA")
-            {
-                conn = new OleDbConnection(Properties.Resources.QADBConnectionString);
-            }
-            else if (Properties.Settings.Default.Environment == "PROD")
-            {
-                conn = new OleDbConnection(Properties.Resources.ProdDBConnectionString);
-            }
+            conn = new OleDbConnection(Properties.Resources.DBConnectionString);
         }
 
         public SalesorderLineItem(int ID)
         {
             //Get this line item from the database.
-            if (Properties.Settings.Default.Environment == "DEV")
-            {
-                conn = new OleDbConnection(Properties.Resources.DevDBConnectionString);
-            }
-            else if (Properties.Settings.Default.Environment == "QA")
-            {
-                conn = new OleDbConnection(Properties.Resources.QADBConnectionString);
-            }
-            else if (Properties.Settings.Default.Environment == "PROD")
-            {
-                conn = new OleDbConnection(Properties.Resources.ProdDBConnectionString);
-            }
+            conn = new OleDbConnection(Properties.Resources.DBConnectionString);
             OleDbCommand cmd = new OleDbCommand("select * from SalesorderLineitems where lineitem_id = " + ID + ";", conn);
             conn.Open();
             OleDbDataReader reader = cmd.ExecuteReader();
