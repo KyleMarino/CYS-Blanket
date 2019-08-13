@@ -64,18 +64,6 @@
     <Compile Include="UserControls\CustomerItem.Designer.cs">
       <DependentUpon>CustomerItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\NewSalesorderItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\NewSalesorderItem.Designer.cs">
-      <DependentUpon>NewSalesorderItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\SalesorderItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\SalesorderItem.Designer.cs">
-      <DependentUpon>SalesorderItem.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,12 +79,6 @@
     </Compile>
     <EmbeddedResource Include="UserControls\CustomerItem.resx">
       <DependentUpon>CustomerItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\NewSalesorderItem.resx">
-      <DependentUpon>NewSalesorderItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\SalesorderItem.resx">
-      <DependentUpon>SalesorderItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

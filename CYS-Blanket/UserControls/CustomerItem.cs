@@ -126,13 +126,7 @@ namespace CYS_Blanket.UserControls
             reader.Close();
             conn.Close();
             //Display Salesorders:
-             foreach(Salesorder so in salesorders)
-             {
-                 SalesorderItem newSO = new SalesorderItem(so);
-                 detailPanel.Controls.Add(newSO);
-                this.expandedHeight += newSO.Height;
-             }
-            detailPanel.Controls.Add(new NewSalesorderItem());
+            //TODO:
 
             //grpDetail.Height = expandedHeight;
             this.Height = expandedHeight;

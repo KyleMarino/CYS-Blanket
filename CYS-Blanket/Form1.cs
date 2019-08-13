@@ -55,7 +55,6 @@ namespace CYS_Blanket
             OleDbDataReader reader;
 
             cmd = new OleDbCommand("Select customer_id from Customers order by customer_id desc", conn);
-            //cmd = new OleDbCommand("Select customer_id from Customers where customer_id = 5 order by customer_id desc", conn);
             conn.Open();
             reader = cmd.ExecuteReader();
 
@@ -84,9 +83,9 @@ namespace CYS_Blanket
 
         private void btnControlTest_Click(object sender, EventArgs e)
         {
-            ControlTester tester = new ControlTester();
+            //ControlTester tester = new ControlTester();
 
-            tester.Show();
+            //tester.Show();
         }
 
     }
