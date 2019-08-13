@@ -32,7 +32,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.grpHeader = new System.Windows.Forms.GroupBox();
             this.grpDetail = new System.Windows.Forms.GroupBox();
-            this.detailPanel = new System.Windows.Forms.Panel();
+            this.detailPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.grpHeader.SuspendLayout();
             this.grpDetail.SuspendLayout();
             this.SuspendLayout();
@@ -71,16 +71,19 @@
             this.grpDetail.Controls.Add(this.detailPanel);
             this.grpDetail.Location = new System.Drawing.Point(4, 74);
             this.grpDetail.Name = "grpDetail";
-            this.grpDetail.Size = new System.Drawing.Size(560, 187);
+            this.grpDetail.Size = new System.Drawing.Size(560, 305);
             this.grpDetail.TabIndex = 3;
             this.grpDetail.TabStop = false;
             this.grpDetail.Text = "Details";
             // 
             // detailPanel
             // 
-            this.detailPanel.Location = new System.Drawing.Point(3, 16);
+            this.detailPanel.AutoSize = true;
+            this.detailPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.detailPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.detailPanel.Location = new System.Drawing.Point(6, 19);
             this.detailPanel.Name = "detailPanel";
-            this.detailPanel.Size = new System.Drawing.Size(551, 165);
+            this.detailPanel.Size = new System.Drawing.Size(0, 0);
             this.detailPanel.TabIndex = 0;
             // 
             // CustomerItem
@@ -91,10 +94,11 @@
             this.Controls.Add(this.grpDetail);
             this.Controls.Add(this.grpHeader);
             this.Name = "CustomerItem";
-            this.Size = new System.Drawing.Size(567, 264);
+            this.Size = new System.Drawing.Size(567, 383);
             this.grpHeader.ResumeLayout(false);
             this.grpHeader.PerformLayout();
             this.grpDetail.ResumeLayout(false);
+            this.grpDetail.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -105,6 +109,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox grpHeader;
         private System.Windows.Forms.GroupBox grpDetail;
-        private System.Windows.Forms.Panel detailPanel;
+        private System.Windows.Forms.FlowLayoutPanel detailPanel;
     }
 }

@@ -42,10 +42,7 @@ namespace CYS_Blanket.UserControls
             get { return number; }
             set { number = value; }
         }
-
-        //Events
-
-      
+ 
         //Constructors
         public CustomerItem()
         {
@@ -96,6 +93,8 @@ namespace CYS_Blanket.UserControls
             }
             salesorders = new List<Salesorder>();
 
+            detailPanel.Dock = DockStyle.Fill;
+
         }
         private void grpHeader_DblClick(object sender, EventArgs e)
         {
@@ -113,7 +112,6 @@ namespace CYS_Blanket.UserControls
         {
             //Expand to show detail panel
             this.expanded = true;
-            this.Height = expandedHeight;
 
             grpDetail.Visible = true;
             //Get SO's from database
@@ -128,12 +126,16 @@ namespace CYS_Blanket.UserControls
             reader.Close();
             conn.Close();
             //Display Salesorders:
-            foreach(Salesorder so in salesorders)
-            {
-                SalesorderItem newSO = new SalesorderItem(so);
-                detailPanel.Controls.Add(newSO);
-            }
+             foreach(Salesorder so in salesorders)
+             {
+                 SalesorderItem newSO = new SalesorderItem(so);
+                 detailPanel.Controls.Add(newSO);
+                this.expandedHeight += newSO.Height;
+             }
             detailPanel.Controls.Add(new NewSalesorderItem());
+
+            //grpDetail.Height = expandedHeight;
+            this.Height = expandedHeight;
         }
         public void Contract() //Public so it can be called by a "collapse all" button on the main form.
         {

@@ -29,14 +29,17 @@
         private void InitializeComponent()
         {
             this.grpHeader = new System.Windows.Forms.GroupBox();
-            this.lblNumber = new System.Windows.Forms.Label();
-            this.lblSOID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblPurchaseOrder = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblExpirationDate = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPurchaseOrder = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblSOID = new System.Windows.Forms.Label();
+            this.lblNumber = new System.Windows.Forms.Label();
+            this.grpDetails = new System.Windows.Forms.GroupBox();
+            this.detailsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.grpHeader.SuspendLayout();
+            this.grpDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpHeader
@@ -48,58 +51,14 @@
             this.grpHeader.Controls.Add(this.label1);
             this.grpHeader.Controls.Add(this.lblSOID);
             this.grpHeader.Controls.Add(this.lblNumber);
-            this.grpHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpHeader.Location = new System.Drawing.Point(0, 0);
             this.grpHeader.Name = "grpHeader";
-            this.grpHeader.Size = new System.Drawing.Size(874, 72);
+            this.grpHeader.Size = new System.Drawing.Size(1255, 72);
             this.grpHeader.TabIndex = 0;
             this.grpHeader.TabStop = false;
             this.grpHeader.Text = "Salesorder - ";
-            // 
-            // lblNumber
-            // 
-            this.lblNumber.AutoSize = true;
-            this.lblNumber.Location = new System.Drawing.Point(24, 32);
-            this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(14, 13);
-            this.lblNumber.TabIndex = 0;
-            this.lblNumber.Text = "#";
-            // 
-            // lblSOID
-            // 
-            this.lblSOID.AutoSize = true;
-            this.lblSOID.Location = new System.Drawing.Point(112, 32);
-            this.lblSOID.Name = "lblSOID";
-            this.lblSOID.Size = new System.Drawing.Size(94, 13);
-            this.lblSOID.TabIndex = 1;
-            this.lblSOID.Text = "SalesorderNumber";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SO#";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "PO#";
-            // 
-            // lblPurchaseOrder
-            // 
-            this.lblPurchaseOrder.AutoSize = true;
-            this.lblPurchaseOrder.Location = new System.Drawing.Point(270, 32);
-            this.lblPurchaseOrder.Name = "lblPurchaseOrder";
-            this.lblPurchaseOrder.Size = new System.Drawing.Size(113, 13);
-            this.lblPurchaseOrder.TabIndex = 3;
-            this.lblPurchaseOrder.Text = "PurchaseorderNumber";
+            this.grpHeader.DoubleClick += new System.EventHandler(this.grpHeader_DoubleClick);
             // 
             // label4
             // 
@@ -119,15 +78,84 @@
             this.lblExpirationDate.TabIndex = 5;
             this.lblExpirationDate.Text = "ExpirationDate";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(223, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "PO#";
+            // 
+            // lblPurchaseOrder
+            // 
+            this.lblPurchaseOrder.AutoSize = true;
+            this.lblPurchaseOrder.Location = new System.Drawing.Point(270, 32);
+            this.lblPurchaseOrder.Name = "lblPurchaseOrder";
+            this.lblPurchaseOrder.Size = new System.Drawing.Size(113, 13);
+            this.lblPurchaseOrder.TabIndex = 3;
+            this.lblPurchaseOrder.Text = "PurchaseorderNumber";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "SO#";
+            // 
+            // lblSOID
+            // 
+            this.lblSOID.AutoSize = true;
+            this.lblSOID.Location = new System.Drawing.Point(112, 32);
+            this.lblSOID.Name = "lblSOID";
+            this.lblSOID.Size = new System.Drawing.Size(94, 13);
+            this.lblSOID.TabIndex = 1;
+            this.lblSOID.Text = "SalesorderNumber";
+            // 
+            // lblNumber
+            // 
+            this.lblNumber.AutoSize = true;
+            this.lblNumber.Location = new System.Drawing.Point(24, 32);
+            this.lblNumber.Name = "lblNumber";
+            this.lblNumber.Size = new System.Drawing.Size(14, 13);
+            this.lblNumber.TabIndex = 0;
+            this.lblNumber.Text = "#";
+            // 
+            // grpDetails
+            // 
+            this.grpDetails.Controls.Add(this.detailsPanel);
+            this.grpDetails.Location = new System.Drawing.Point(4, 79);
+            this.grpDetails.Name = "grpDetails";
+            this.grpDetails.Size = new System.Drawing.Size(1248, 378);
+            this.grpDetails.TabIndex = 1;
+            this.grpDetails.TabStop = false;
+            this.grpDetails.Text = "Salesorder Details";
+            // 
+            // detailsPanel
+            // 
+            this.detailsPanel.AutoSize = true;
+            this.detailsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.detailsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.detailsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsPanel.Location = new System.Drawing.Point(3, 16);
+            this.detailsPanel.Name = "detailsPanel";
+            this.detailsPanel.Size = new System.Drawing.Size(1242, 359);
+            this.detailsPanel.TabIndex = 0;
+            // 
             // SalesorderItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.grpDetails);
             this.Controls.Add(this.grpHeader);
             this.Name = "SalesorderItem";
-            this.Size = new System.Drawing.Size(874, 72);
+            this.Size = new System.Drawing.Size(1255, 465);
             this.grpHeader.ResumeLayout(false);
             this.grpHeader.PerformLayout();
+            this.grpDetails.ResumeLayout(false);
+            this.grpDetails.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -142,5 +170,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSOID;
         private System.Windows.Forms.Label lblNumber;
+        private System.Windows.Forms.GroupBox grpDetails;
+        private System.Windows.Forms.FlowLayoutPanel detailsPanel;
     }
 }
