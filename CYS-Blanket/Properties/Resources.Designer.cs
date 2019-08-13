@@ -61,11 +61,38 @@ namespace CYS_Blanket.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot;C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS-Blanket-DB.accdb&quot;;Persist Security Info=True.
+        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot;C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_ENVIRONMENT.accdb&quot;;Persist Security Info=True.
         /// </summary>
         internal static string DBConnectionString {
             get {
                 return ResourceManager.GetString("DBConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot;C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_DEV.accdb&quot;;Persist Security Info=True.
+        /// </summary>
+        internal static string DevDBConnectionString {
+            get {
+                return ResourceManager.GetString("DevDBConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot;C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_PROD.accdb&quot;;Persist Security Info=True.
+        /// </summary>
+        internal static string ProdDBConnectionString {
+            get {
+                return ResourceManager.GetString("ProdDBConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot;C:\Users\Kyle work\source\repos\CYS-Blanket\CYS-Blanket\CYS_Blanket_QA.accdb&quot;;Persist Security Info=True.
+        /// </summary>
+        internal static string QADBConnectionString {
+            get {
+                return ResourceManager.GetString("QADBConnectionString", resourceCulture);
             }
         }
     }

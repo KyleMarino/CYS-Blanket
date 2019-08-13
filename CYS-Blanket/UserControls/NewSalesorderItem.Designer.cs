@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSO = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lineItemsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,13 +114,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SO#";
             // 
+            // lineItemsPanel
+            // 
+            this.lineItemsPanel.Location = new System.Drawing.Point(3, 82);
+            this.lineItemsPanel.Name = "lineItemsPanel";
+            this.lineItemsPanel.Size = new System.Drawing.Size(949, 281);
+            this.lineItemsPanel.TabIndex = 1;
+            // 
             // NewSalesorderItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lineItemsPanel);
             this.Controls.Add(this.groupBox1);
             this.Name = "NewSalesorderItem";
-            this.Size = new System.Drawing.Size(956, 83);
+            this.Size = new System.Drawing.Size(956, 366);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -136,5 +145,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSO;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel lineItemsPanel;
     }
 }

@@ -22,13 +22,35 @@ namespace CYS_Blanket.Classes
         public List<SalesorderLineItem> lineitems { get; set; }
         public Salesorder()
         {
-            conn = new OleDbConnection(Properties.Resources.DBConnectionString);
+            if (Properties.Settings.Default.Environment == "DEV")
+            {
+                conn = new OleDbConnection(Properties.Resources.DevDBConnectionString);
+            }
+            else if (Properties.Settings.Default.Environment == "QA")
+            {
+                conn = new OleDbConnection(Properties.Resources.QADBConnectionString);
+            }
+            else if (Properties.Settings.Default.Environment == "PROD")
+            {
+                conn = new OleDbConnection(Properties.Resources.ProdDBConnectionString);
+            }
         }
 
         public Salesorder(int id)
         {
             //Get information about this salesorder from the database.
-            conn = new OleDbConnection(Properties.Resources.DBConnectionString);
+            if (Properties.Settings.Default.Environment == "DEV")
+            {
+                conn = new OleDbConnection(Properties.Resources.DevDBConnectionString);
+            }
+            else if (Properties.Settings.Default.Environment == "QA")
+            {
+                conn = new OleDbConnection(Properties.Resources.QADBConnectionString);
+            }
+            else if (Properties.Settings.Default.Environment == "PROD")
+            {
+                conn = new OleDbConnection(Properties.Resources.ProdDBConnectionString);
+            }
             OleDbCommand cmd = new OleDbCommand("Select * from Salesorders where salesorder_id = " + id + ";", conn);
             conn.Open();
             OleDbDataReader reader = cmd.ExecuteReader();

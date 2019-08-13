@@ -44,8 +44,17 @@ namespace CYS_Blanket.Classes
 
         public Customer(int ID)
         {
-
-            conn = new OleDbConnection(Properties.Resources.DBConnectionString);
+            if (Properties.Settings.Default.Environment == "DEV")
+            {
+                conn = new OleDbConnection(Properties.Resources.DevDBConnectionString);
+            }else if(Properties.Settings.Default.Environment == "QA")
+            {
+                conn = new OleDbConnection(Properties.Resources.QADBConnectionString);
+            }
+            else if(Properties.Settings.Default.Environment == "PROD")
+            {
+                conn = new OleDbConnection(Properties.Resources.ProdDBConnectionString);
+            }
             this.CustomerID = ID;
 
             Load();
