@@ -23,6 +23,10 @@ namespace CYS_Blanket
             customers = new List<Customer>();
 
             this.WindowState = FormWindowState.Maximized;
+
+            customerPanel.Width = grpCustomers.Width-2;
+            customerPanel.Height = grpCustomers.Height-2;
+            
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -30,6 +34,7 @@ namespace CYS_Blanket
             //List customers in the database.
              conn = new OleDbConnection(Properties.Resources.DBConnectionString);
 
+            
             LoadCustomers();
         }
 
@@ -39,6 +44,7 @@ namespace CYS_Blanket
             OleDbDataReader reader;
 
             cmd = new OleDbCommand("Select customer_id from Customers order by customer_id desc", conn);
+            //cmd = new OleDbCommand("Select customer_id from Customers where customer_id = 5 order by customer_id desc", conn);
             conn.Open();
             reader = cmd.ExecuteReader();
 
@@ -52,7 +58,7 @@ namespace CYS_Blanket
             foreach(Customer c in customers)
             {
                 CustomerItem newC = new CustomerItem(c);
-                newC.Resize(newC.Height, customerPanel.Width -10);
+                newC.Resize(100, grpCustomers.Width -10);
                 customerPanel.Controls.Add(newC);
             }
         }
@@ -64,5 +70,13 @@ namespace CYS_Blanket
                 c.Contract();
             }
         }
+
+        private void btnControlTest_Click(object sender, EventArgs e)
+        {
+            ControlTester tester = new ControlTester();
+
+            tester.Show();
+        }
+
     }
 }

@@ -33,12 +33,12 @@ namespace CYS_Blanket.Classes
             while (reader.Read())
             {
                 LineitemID = (int)(reader[0]);
-                Item = reader[1].ToString();
-                Description = reader[2].ToString();
-                Quantity = (int)(reader[3]);
-                UnitOfMeasure = reader[4].ToString();
-                Rate = Convert.ToDouble(reader[5]);
-                Amount = Convert.ToDouble(reader[6]);
+                Item = reader[2].ToString();
+                Description = reader[3].ToString();
+                Quantity = (int)(reader[4]);
+                UnitOfMeasure = reader[5].ToString();
+                Rate = Convert.ToDouble(reader[6]);
+                Amount = Convert.ToDouble(reader[7]);
             }
             reader.Close();
             conn.Close();
